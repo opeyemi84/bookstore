@@ -3,9 +3,9 @@ const router = express.Router();
 
 const book_controller = require("../controller/booksController");
 
-router.get("/", book_controller.index);
+router.get("/", book_controller.read_books);
 
-router.get("/:id", book_controller.create_books_id);
+router.get("/:id", book_controller.read_books_id);
 
 router.post("/", book_controller.create_books);
 
