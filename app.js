@@ -6,6 +6,7 @@ const { connectdb } = require("./db");
 require("dotenv").config();
 
 const bookRouter = require("./routes/books");
+const authorRouter = require("./routes/author");
 
 const app = express();
 
@@ -19,11 +20,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use("/books", bookRouter);
+app.use("/authors", authorRouter);
 
 // app.get("/", (req, res) => {
 //   res.send("welcome home");
 // });
 
+//Connect to express Server
 app.listen(PORT, () => {
   console.log(`Server running on PORT: http://localhost: ${PORT}`);
 });
