@@ -1,6 +1,6 @@
 const books = require("../model/book");
 
-//GET all books
+//READ ALL BOOKS
 exports.read_books = (req, res) => {
   books
     .find({})
