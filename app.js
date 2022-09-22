@@ -22,10 +22,6 @@ app.use(cookieParser());
 app.use("/books", bookRouter);
 app.use("/authors", authorRouter);
 
-// app.get("/", (req, res) => {
-//   res.send("welcome home");
-// });
-
 //Connect to express Server
 app.listen(PORT, () => {
   console.log(`Server running on PORT: http://localhost: ${PORT}`);
